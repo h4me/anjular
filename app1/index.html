@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="custom.css">
       </head>
       <body>
+
         <h2>Todo</h2>
+<!--
         <div ng-controller="TodoListController as todoList">
           <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
           [ <a href="" ng-click="todoList.archive()">archive</a> ]
@@ -24,10 +26,30 @@
             <input class="btn-primary" type="submit" value="add">
           </form>
         </div>
+-->
 
+<div ng-controller="mainCtrl" class="ng-scope" ng-click="Send2Me()">
 
+    <div ng-controller="Example1" class="ng-scope">
+      <p>Example1!</p>
+        <table ng-repeat="row in jTable">
+         <tr><td> {{row.name}}  </td><td>{{row.phone}}</td></tr>
+        </table>
+        <input type="text" ng-model="reader" />
+        {{reader}}
+        {{sharedata}}
+   </div>
 
+   <div ng-controller="Example2" class="ng-scope">
+       <p>Example2</p>
+       <table ng-repeat="row in jTable">
+        <tr><td> {{row.name}}  </td><td>{{row.phone}}</td></tr>
+       </table>
+        <p> {{ jeden }} </p>
 
+  </div>
+
+</div>
 
       </body>
     </html>
